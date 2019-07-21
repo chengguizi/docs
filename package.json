@@ -1,0 +1,14 @@
+{
+    "name": "chengguizi-dev-book-vue",
+    "version": "0.1.0",
+    "dependencies": {},
+    "devDependencies": {
+        "vuepress": "^1.0.2",
+        "vuepress-bar": "^0.1.1"
+    },
+    "scripts": {
+        "docs:dev": "vuepress dev docs",
+        "docs:build": "vuepress build docs"
+    },
+    "license": "MIT"
+}
