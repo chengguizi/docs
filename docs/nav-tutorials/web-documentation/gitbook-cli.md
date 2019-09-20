@@ -5,8 +5,8 @@
 To install the command line interface:
 
 > - Install Nodejs (with NPM)
-> - `sudo npm install gitbook-cli -g`
-> - `sudo npm install gitbook-pdf -g`
+> - `npm install gitbook-cli -g`
+> - `npm install gitbook-pdf -g`
 
 
 To verify installation:

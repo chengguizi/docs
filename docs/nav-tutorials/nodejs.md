@@ -16,3 +16,23 @@ To verify version 12 has been installed successfully:
 node -v 
 npm -v
 ```
+
+## Fix npm Global Install Permissions
+
+First check, where npm point to, if you call:
+
+`npm config get prefix`
+
+If /usr is returned, you can do the following:
+
+``` bash
+mkdir ~/.npm-global
+export NPM_CONFIG_PREFIX=~/.npm-global
+export PATH=$PATH:~/.npm-global/bin
+```
+To make it permanent, add the `export` items in the `.bashrc`
+
+## Install yarn package manager
+
+*NOTE: Many have said yarn is no longer relevant, as it no longer has much advantages over Node.js
+https://yarnpkg.com/lang/en/docs/install/#debian-stable

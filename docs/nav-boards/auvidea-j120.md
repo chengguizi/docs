@@ -1,1 +1,0 @@
-# Auvidea J120 Board Firmware

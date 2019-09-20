@@ -19,6 +19,8 @@ module.exports = {
       // { text: 'External', link: 'https://google.com' },
      ...barConfig.nav],
     sidebar: barConfig.sidebar,
+    lastUpdated: 'Last Updated',
+    editLinks: false,
     displayAllHeaders: true // Default: false
   }
 };
