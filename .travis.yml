@@ -25,5 +25,5 @@ deploy:
   github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
   keep_history: false # true
   on: # Conditional Releases with on:
-    branch: master
+    branch: docs
 
