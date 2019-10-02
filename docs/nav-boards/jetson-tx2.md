@@ -2,7 +2,31 @@
 
 ## Development Kit Board
 
+### Basic Flashing
+http://developer.download.nvidia.com/embedded/L4T/r23_Release_v1.0/l4t_quick_start_guide.txt
+
+make sure `./apply_binaries.sh` is executed once before any flashing
+
+- to flash every partitions with rebuilding system.img: \
+`sudo ./flash.sh jetson-tx2 mmcblk0p1`
+
+- to flash without rebuilding system.img: \
+`sudo ./flash.sh -r jetson-tx2 mmcblk0p1`
+
+- to flash Kernel device tree blob: \
+add `-k kernel-dtb`
+
+## Check DTS file version
+
+dmesg | grep "DTS File Name"
+
+
+
 ## Auvidea J120
+
+## Shutdown on power button
+
+gsettings set org.gnome.settings-daemon.plugins.power button-power 'shutdown'
 
 ### UART
 - UART2 on Auvidea J120 Rev 6, could be accessed from /dev/ttyTHS1
