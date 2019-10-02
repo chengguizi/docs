@@ -22,7 +22,8 @@ module.exports = {
     lastUpdated: 'Last Updated',
     editLinks: false,
     displayAllHeaders: true // Default: false
-  }
+  },
+  base: '/docs/'
 };
 
 
