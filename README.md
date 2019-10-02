@@ -1,2 +1,3 @@
-[![Build Status](https://travis-ci.org/chengguizi/docs.svg?branch=master)](https://travis-ci.org/chengguizi/docs)
+[![Build Status](https://travis-ci.org/chengguizi/docs.svg?branch=docs)](https://travis-ci.org/chengguizi/docs)
 
+Still work in progress..
