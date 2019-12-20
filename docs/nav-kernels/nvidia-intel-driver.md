@@ -2,48 +2,32 @@
 order: 1
 ---
 # Nvidia Intel Graphics Driver
-
-## Remove existing Nvidia driver
-`sudo apt-get purge nvidia-*`
-
-## Install Nvidia Driver
-- Go to https://www.nvidia.com/object/unix.html
-- Download the latest driver in .run format
-- Go to `init 1` state, and uninstall existing drivers if necessary
-- Install .run (There might be false warnings, the might be safely ignored)
-
-## Verify That Nouveau Driver is Disabled
-
-``` bash
-grep nouveau /var/log/Xorg.0.log
+1. go to [Nvidia]( https://www.nvidia.com/object/unix.html ) to download the latest driver in .run format
+2. go to `single-user mode` and uninstall existing nvidia drivers
 ```
-If it is not running, it should have been logged as `Unloading nouveau`
-
-Alternatively, make sure `lsmod | grep nouveau` has no output.
-
-## Verify The Running Kernel Module
-
-`prime-select query`
-
-## [Obsolete] Disable Nouveau Kernel Module
-
-**This need not be done manually, instead the installation of Nvidia driver should create this file automatically!**
-
-``` bash
-sudo bash -c "echo blacklist nouveau > /etc/modprobe.d/blacklist-nvidia-nouveau.conf"
-sudo bash -c "echo options nouveau modeset=0 >> /etc/modprobe.d/blacklist-nvidia-nouveau.conf"
+$ init 1
+$ sudo apt-get purge nvidia-*
 ```
-------
+3. Verify That Nouveau Driver is Disabled: remove nvidia related config files under `/etc/modprobe.d/` and `/lib/modprobe.d/` 
+4. excute the downloaded run file
+```
+$ ./NVIDIA-Linux-x86_64-440.44.run
+```
+5. update the following lines in grub file
+   
+`$ nano /etc/default/grub`
 
-cat /etc/modprobe.d/blacklist-nvidia-nouveau.conf
-blacklist nouveau
-options nouveau modeset=0
+```
+GRUB_CMDLINE_LINUX_DEFAULT="modprobe.blacklist=nouveau"
+GRUB_CMDLINE_LINUX=""
+```
 
-then do:
-`sudo update-initramfs -u -k all`
+`$ sudo update-grub`
+
+6. verify the running kernel module`$ prime-select query `. Switch to nvidia if the current version is intel: `$ prime-select nvidia `
 
 
-## Install CUDA
+7. Install CUDA if necessary
 
 install CUDA 10 from official website (.deb), and follow the instructions to add apt-key. Lastly:
 
