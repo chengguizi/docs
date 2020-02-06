@@ -1,4 +1,4 @@
-# Nvidia Jetson TX2
+# Miscellaneous
 
 ## Development Kit Board
 
@@ -20,9 +20,6 @@ add `-k kernel-dtb`
 
 dmesg | grep "DTS File Name"
 
-
-
-## Auvidea J120
 
 ## Shutdown on power button
 
