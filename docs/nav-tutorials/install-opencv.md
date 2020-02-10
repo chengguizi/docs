@@ -18,12 +18,15 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	-D PYTHON_EXECUTABLE=/usr/bin/python3 \
 	-D BUILD_EXAMPLES=ON \
 	-D WITH_CUDA=ON \
-	-D CUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-10.0 \
+	-D CUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda \
 	-D CUDA_ARCH_BIN="6.0 6.1 7.0 7.5" \
 	-D BUILD_opencv_cudacodec=OFF \
 	..
 	
 ```
+
+Compute capabilities: https://developer.nvidia.com/cuda-gpus
+Note: cuda10以上没有dynlink_nvcuvid.h和nvcuvid.h,所以要将BUILD_opencv_cudacodec=OFF
 
 
 Reference: https://www.pugetsystems.com/labs/hpc/How-To-Install-CUDA-10-together-with-9-2-on-Ubuntu-18-04-with-support-for-NVIDIA-20XX-Turing-GPUs-1236/

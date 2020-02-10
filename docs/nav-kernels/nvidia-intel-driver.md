@@ -3,7 +3,9 @@ order: 1
 ---
 # Nvidia Intel Graphics Driver
 1. go to [Nvidia]( https://www.nvidia.com/object/unix.html ) to download the latest driver in .run format
-2. go to `single-user mode` and uninstall existing nvidia drivers
+2. go to `single-user mode` and uninstall existing nvidia drivers `sudo apt-get purge nvidia-*`
+You may need to perform `apt autoremove` to remove stray nvidia related packages. 
+
 ```
 $ init 1
 $ sudo apt-get purge nvidia-*
@@ -26,9 +28,26 @@ GRUB_CMDLINE_LINUX=""
 
 6. verify the running kernel module`$ prime-select query `. Switch to nvidia if the current version is intel: `$ prime-select nvidia `
 
+## Verify That Nouveau Driver is Disabled
+
+``` bash
+grep nouveau /var/log/Xorg.0.log
+
 
 7. Install CUDA if necessary
 
 install CUDA 10 from official website (.deb), and follow the instructions to add apt-key. Lastly:
 
 `sudo apt install cuda`
+
+In .bashrc add:
+``` bash
+# CUDA
+export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}$
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+```
+
+# Install CUDA DNN
+``` bash
+sudo apt install libcudnn7
+```

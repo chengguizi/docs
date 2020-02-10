@@ -46,3 +46,8 @@ gsettings set org.gnome.settings-daemon.plugins.power button-power 'shutdown'
       - `killall dhclient` (this should make things work already)
       - `systemctl stop rsyslog`
       - `systemctl stop network-manager`
+
+
+## Known Issues
+
+- Fans is not working properly on Jetpack 4.2 [Link](https://devtalk.nvidia.com/default/topic/1060713/can-t-access-fan-jetpack-4-2-development-board-and-auvidea-j120-board-/)
