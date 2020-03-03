@@ -28,15 +28,15 @@ GRUB_CMDLINE_LINUX=""
 
 6. verify the running kernel module`$ prime-select query `. Switch to nvidia if the current version is intel: `$ prime-select nvidia `
 
-## Verify That Nouveau Driver is Disabled
+7. Verify That Nouveau Driver is Disabled
 
 ``` bash
 grep nouveau /var/log/Xorg.0.log
+```
 
+## Install CUDA if necessary
 
-7. Install CUDA if necessary
-
-install CUDA 10 from official website (.deb), and follow the instructions to add apt-key. Lastly:
+install CUDA 10 from [official website](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1804&target_type=deblocal) (.deb), and follow the instructions to add apt-key. Lastly:
 
 `sudo apt install cuda`
 

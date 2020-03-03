@@ -5,7 +5,17 @@ Still work in progress..
 
 ## Note
 
-To build
+To install the dependencies
 ``` bash
 npm install
+```
+
+To preview vuepress
+``` bash
+npm run serve
+```
+
+To build the static website
+``` bash
+npm run build
 ```
