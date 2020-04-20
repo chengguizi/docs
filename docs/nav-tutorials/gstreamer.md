@@ -1,4 +1,4 @@
-#GStreamer
+# GStreamer
 
 ## Installation
 
@@ -9,9 +9,6 @@ sudo apt install libgstreamer-plugins-base1.0-dev
 ```
 
 ## Tutorials
+[Using GStreamer (YouTube)](https://www.youtube.com/watch?v=ZphadMGufY8)
 
-https://www.youtube.com/watch?v=ZphadMGufY8
-
-regarding UVC mechanism
-
-https://blog.csdn.net/Guet_Kite/article/details/78570059
+[About UVC mechanism](https://blog.csdn.net/Guet_Kite/article/details/78570059)
