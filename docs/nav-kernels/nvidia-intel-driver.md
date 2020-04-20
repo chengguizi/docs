@@ -51,3 +51,5 @@ export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PAT
 ``` bash
 sudo apt install libcudnn7
 ```
+
+[Official Installation Guide (CUDA)](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html)

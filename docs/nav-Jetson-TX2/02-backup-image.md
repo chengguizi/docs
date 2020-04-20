@@ -7,6 +7,7 @@
    2. at `~/.ros`
    3. at  `~/.local/share/Trash/expunged/*`
    4. at `/var/log` use command `truncate -s 0 /var/log/syslog` [refernce](https://askubuntu.com/questions/436051/i-cannot-clear-syslog-but-i-can-remove-it)
+   5. Clear package cache `sudo apt-get clean`
 - To check large files and directories \
    `sudo du -Sh | sort -rh | head -20`
 - To clear unallocated disk space to zero \ 
