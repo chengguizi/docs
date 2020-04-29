@@ -17,6 +17,24 @@ node -v
 npm -v
 ```
 
+
+
+## Install yarn package manager
+
+*NOTE*: Many have said yarn is no longer relevant, as it no longer has much advantages over Node.js
+https://yarnpkg.com/lang/en/docs/install/#debian-stable
+
+``` bash
+curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt-get update && sudo apt-get install yarn
+
+```
+
+history below
+
+---
+
 ## Fix npm Global Install Permissions
 
 First check, where npm point to, if you call:
@@ -31,8 +49,3 @@ export NPM_CONFIG_PREFIX=~/.npm-global
 export PATH=$PATH:~/.npm-global/bin
 ```
 To make it permanent, add the `export` items in the `.bashrc`
-
-## Install yarn package manager
-
-*NOTE: Many have said yarn is no longer relevant, as it no longer has much advantages over Node.js
-https://yarnpkg.com/lang/en/docs/install/#debian-stable
