@@ -1,6 +1,0 @@
----
-prev: ../
----
-# Introduction
-
-for sensors
